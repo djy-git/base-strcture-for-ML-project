@@ -16,7 +16,8 @@ def generate_dirs(*dirs):
             os.makedirs(dir)
             print(f"Generate directory: '{dir}'")
         except:
-            print(f"Existing directory: '{dir}'")
+            pass
+            # print(f"Existing directory: '{dir}'")
 def remove_dirs(*dirs):
     print("> Remove directories")
     for dir in dirs:
