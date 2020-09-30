@@ -1,11 +1,11 @@
-"""Environment module commonly used in other files
+"""# Environment module commonly used in other files
 
 1. This file imports `base_util.py` for base packages and base functions or classes
 2. Signals are handled here
 3. Generate input, output, log directories in `ROOT_DIR_PATH` defined in `config.py`
 4. Register `Logger`
-  1) Get `logger' that is instance of `Logger`
-  2) Change the standard output IO to the file IO in the `LOG_DIR_PATH`
+    1) Get `logger` that is instance of `Logger`
+    2) Change the standard output IO to the file IO in the `LOG_DIR_PATH`
 5. Set the printing options of `numpy` and `pandas`
 """
 ### Import base library
