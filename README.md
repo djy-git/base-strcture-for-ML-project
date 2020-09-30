@@ -10,18 +10,7 @@ ROOT
 │   ├── README.md
 │   └── dummy.algo
 ├── doc-sphinx
-│   ├── Makefile
-│   ├── README.md
-│   ├── make.bat
-│   └── source
-│       ├── _static
-│       ├── _templates
-│       ├── conf.py
-│       ├── configs.rst
-│       ├── envs.rst
-│       ├── index.rst
-│       ├── main.rst
-│       └── modules.rst
+│   └── README.md
 ├── etc
 │   └── dummy
 ├── input
