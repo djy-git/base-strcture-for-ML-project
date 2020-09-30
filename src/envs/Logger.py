@@ -1,6 +1,6 @@
 """**`Logger` logs the information of the process**
 
-1. `Logger` logs the information at the log file as well as terminal (see the details in `env.py`)
+1. `Logger` logs the information at the log file as well as terminal
 2. `Logger` assists fancy partitioning with 4 stages (chapter, section, subsection, subsubsection)
 
 ----
@@ -34,9 +34,8 @@ class Logger:
 
         self.space = 0
 
-    def get_stdout(self):
-        print("")
-        return self.LogOut(self.log_dir_path)
+    def change_stdout(self):
+        sys.stdout = self.LogOut(self.log_dir_path)
 
     def info(self, *msgs):
         if self.num_section == 0:

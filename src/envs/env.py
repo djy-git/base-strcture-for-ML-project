@@ -3,9 +3,7 @@
 1. This file imports `base_util.py` for base packages and base functions or classes
 2. Signals are handled here
 3. Generate input, output, log directories in `ROOT_DIR_PATH` defined in `config.py`
-4. Register `Logger`
-    1) Get `logger` that is instance of `Logger`
-    2) Change the standard output IO to the file IO in the `LOG_DIR_PATH`
+4. Import Logger
 5. Set the printing options of `numpy` and `pandas`
 
 -----
@@ -29,8 +27,6 @@ generate_dirs(INPUT_DIR_PATH, OUTPUT_DIR_PATH, LOG_DIR_PATH)
 
 ### Logger
 from envs.Logger import *
-logger     = Logger(LOG_DIR_PATH)
-sys.stdout = logger.get_stdout()
 
 
 ### Set the printing options
