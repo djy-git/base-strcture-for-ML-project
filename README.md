@@ -86,14 +86,14 @@ This controls access to the source codes in `src` directory and has information 
 ### 9. `src` directory
 This directory has the source codes of the project.
 
-#### 1) `src/configs` directory
+#### 1) `/src/configs` directory
 The modules in this directory(package) handles the configuration variables commonly used in the project.  
 See the details in each module's head comment.
 
-#### 2) `src/envs` directory
+#### 2) `/src/envs` directory
 The modules in this constructs the environment commonly used in the project.  
 See the details in each module's head comment.
 
-#### 3) `src/main.py`
+#### 3) `/src/main.py`
 This module is invoked in `setup.py`.  
 The action in `main.py` is controlled by the command received from `setup.py`.
