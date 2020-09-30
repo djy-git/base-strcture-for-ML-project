@@ -52,4 +52,11 @@ ROOT
 ```
 
 
-### 2. 
+### 2. Description
+1. `algorithm` directory  
+The algorithms are here.  
+Despite a lot of searches, I couldn't find a good algorithm(pseudo-code) editor.  
+So I created a new file type ***.algo** that can be viewed in Pycharm.  
+See the details in `/algorithm/README.md` 
+
+2. `doc-sphinx` directory
