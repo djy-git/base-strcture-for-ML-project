@@ -1,4 +1,4 @@
-# base-strcture-for-ML-project
+# base-structure-for-ML-project
 The base structure of machine learning project
 
 ## I. Directory structure 
