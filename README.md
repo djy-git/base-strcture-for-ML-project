@@ -13,7 +13,7 @@ ROOT
 ├── input
 │   └── dummy
 ├── log
-│   └── dummy.log
+│   └── dummy
 ├── output
 │   └── dummy
 ├── playground

@@ -1,4 +1,4 @@
-from env.base_env import *
+from envs.base_env import *
 
 
 def generate_dirs(*dirs):

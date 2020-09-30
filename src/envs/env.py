@@ -1,13 +1,13 @@
 ### Import base library
-from env.base_util import *
+from envs.base_util import *
 
 
-### Import config data
-from config.config import *
+### Import configs data
+from configs.config import *
 
 
 ### Signal handling
-from env.SignalHandler import *
+from envs.SignalHandler import *
 SignalHandler.register_sighandler(signal.SIGINT)
 
 
@@ -16,7 +16,7 @@ generate_dirs(INPUT_DIR_PATH, OUTPUT_DIR_PATH, LOG_DIR_PATH)
 
 
 ### Logger
-from env.Logger import *
+from envs.Logger import *
 logger     = Logger(LOG_DIR_PATH)
 sys.stdout = logger.get_stdout()
 
