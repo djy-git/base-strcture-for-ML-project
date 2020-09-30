@@ -20,10 +20,10 @@ envs.SignalHandler module
    :undoc-members:
    :show-inheritance:
 
-envs.base\_env module
+envs.base\_pkg module
 ---------------------
 
-.. automodule:: envs.base_env
+.. automodule:: envs.base_pkg
    :members:
    :undoc-members:
    :show-inheritance:
