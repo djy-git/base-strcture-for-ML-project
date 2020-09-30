@@ -37,7 +37,7 @@ MANIFEST
 pip-log.txt
 pip-delete-this-directory.txt
 
-# Unit test / coverage reports
+# Unit playground / coverage reports
 htmlcov/
 .tox/
 .nox/
@@ -128,5 +128,5 @@ dmypy.json
 # Pyre type checker
 .pyre/
 
-# Pycharm config file
+# Pycharm config.py file
 .idea
