@@ -1,4 +1,9 @@
-from envs.base_env import *
+"""`Logger` logs the information of the process
+
+1. `Logger` logs the information at the log file as well as terminal (see the details in `env.py`)
+2. `Logger` assists fancy partitioning with 4 stages (chapter, section, subsection, subsubsection)
+"""
+from envs.base_pkg import *
 
 
 class Logger:

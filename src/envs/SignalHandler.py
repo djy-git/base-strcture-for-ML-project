@@ -1,7 +1,8 @@
 """Signal handler
+
 1. Registered signal causes exit(1) with printing signal number
 """
-from envs.base_env import *
+from envs.base_pkg import *
 
 
 class SignalHandler:
