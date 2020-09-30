@@ -14,3 +14,7 @@ ROOT_DIR_PATH   = abspath(dirname(dirname(dirname(__file__))))
 INPUT_DIR_PATH  = join(ROOT_DIR_PATH, "input")
 OUTPUT_DIR_PATH = join(ROOT_DIR_PATH, "output")
 LOG_DIR_PATH    = join(ROOT_DIR_PATH, "log")
+
+
+### Random seed
+SEED = 42
