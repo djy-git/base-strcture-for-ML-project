@@ -1,4 +1,4 @@
-# Documentation using [`Sphinx`](https://www.sphinx-doc.org/en/master/) package
+# Documentation using [`SPHINX`](https://www.sphinx-doc.org/en/master/) package
 Details are in https://www.sphinx-doc.org/en/master/
 
 ## Source root directory: `/src`
@@ -55,7 +55,7 @@ Details are in https://www.sphinx-doc.org/en/master/
        html_theme = 'sphinx_rtd_theme'
 
 
-#### 2) `/doc-sphinxsource/index.rst`
+#### 2) `/doc-sphinx/source/index.rst`
 1. Add `modules`
        
        // Existing (Line 9-13)
