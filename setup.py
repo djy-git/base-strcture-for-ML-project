@@ -26,6 +26,11 @@ class MainCommand:
         call(["python", "main.py", option], cwd="src")
 
 
+class Run(MainCommand, Command):
+    description = "Run src/main.py"
+    def run(self):
+        super().run_main()
+
 class Log(MainCommand, Command):
     description = "Run src/main.py log"
     def run(self):
@@ -56,6 +61,7 @@ setup(
     ],
     python_requires=">=3.7",
     cmdclass={
+        "run"   : Run,
         "log"   : Log,
         "reset" : Reset,
     }
