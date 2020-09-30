@@ -23,10 +23,12 @@ class MainCommand:
     def run_main(option=""):
         call(["python", "main.py", option], cwd="src")
 
+
 class Log(MainCommand, Command):
     description = "Run src/main.py log"
     def run(self):
         super().run_main('log')
+
 
 class Reset(MainCommand, Command):
     description = "Run src/main.py reset"
