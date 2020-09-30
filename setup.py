@@ -3,13 +3,17 @@
 1. Approach to the source code with `python setup.py 'COMMAND'`
 2. Append the 'COMMAND' adding `cmdclass` in `setup`
 """
-
-
 from setuptools import find_packages, setup
 from setuptools import Command
 from subprocess import call
 
 
+### Long description is in 'README.md'
+with open("README.md", "r") as f:
+    long_description = f.read()
+
+
+### Permitted commands
 class MainCommand:
     user_options = []
     def initialize_options(self):   pass
@@ -18,7 +22,6 @@ class MainCommand:
     @staticmethod
     def run_main(option=""):
         call(["python", "main.py", option], cwd="src")
-
 
 class Log(MainCommand, Command):
     description = "Run src/main.py log"
@@ -31,10 +34,7 @@ class Reset(MainCommand, Command):
         super().run_main('reset')
 
 
-with open("README.md", "r") as f:
-    long_description = f.read()
-
-
+### Setup summary
 setup(
     name="Base project",
     author="Yoon Dongjin",
@@ -43,7 +43,7 @@ setup(
     long_description=long_description,
     long_description_content_type="text/markdown",
     url="https://github.com/djy-git/base-strcture-for-ML-project",
-    packages=find_packages(),
+    packages=find_packages(),  # `requirements.txt` is preferred
     classifiers=[
         "Programming Language :: Python :: 3",
         # "License",
