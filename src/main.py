@@ -1,6 +1,8 @@
-"""main module invoked in `setup.py`
+"""**main module invoked in `setup.py`**
 
 1. Usually, main module consists of switch statement for argument(command) from `setup.py`
+
+----
 """
 from envs.env import *
 

@@ -1,7 +1,9 @@
-"""Setup interface
+"""**Setup interface**
 
 1. Approach to the source code with `python setup.py 'COMMAND'`
 2. Append the 'COMMAND' adding `cmdclass` in `setup`
+
+----
 """
 from setuptools import find_packages, setup
 from setuptools import Command

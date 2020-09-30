@@ -1,7 +1,9 @@
-"""Base utility module
+"""**Base utility module**
 
 1. This file **should not** import other modules or packages in the project except `base_pkg.py` (thus, **base**)
 2. This file only defines commonly used functions or classes
+
+----
 """
 from envs.base_pkg import *
 

@@ -1,7 +1,9 @@
-"""Configuration variables are defined here
+"""**Configuration variables are defined here**
 
 1. Constants are CAPITAL letters
 2. This file **should not** have functions or classes
+
+----
 """
 from envs.base_pkg import *
 from configs.config_user import *

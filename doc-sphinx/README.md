@@ -71,7 +71,7 @@ Details are in https://www.sphinx-doc.org/en/master/
           modules
       
 
-### 5. Generate `rst` files
+### 5. Generate `rst` files (ReStructuredText)
     $ sphinx-apidoc -f -o source ../src
     
     

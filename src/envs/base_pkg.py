@@ -1,7 +1,9 @@
-"""Base package module
+"""**Base package module**
 
 1. This file **should not** import other modules or packages in the project (thus, **base**)
 2. This file only imports commonly used packages
+
+----
 """
 ### Internal packages
 import os
