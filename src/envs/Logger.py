@@ -40,7 +40,7 @@ class Logger:
     def chapter(self, *msgs):
         self.num_chapter += 1
         self.space = 0
-        print(f"{' '*self.space}Chapter {self.num_chapter}", *msgs)
+        print(f"{' '*self.space}-- Chapter {self.num_chapter}", *msgs)
 
     def section(self, *msgs):
         self.num_section += 1
