@@ -91,7 +91,7 @@ The modules in this directory(package) handles the configuration variables commo
 See the details in each module's head comment.
 
 #### 2) `/src/envs` directory
-The modules in this constructs the environment commonly used in the project.  
+The modules in this package constructs the environment commonly used in the project.  
 See the details in each module's head comment.
 
 #### 3) `/src/main.py`
