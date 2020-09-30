@@ -7,7 +7,7 @@
 """
 ### Internal packages
 import os
-from os.path import join, isdir, dirname
+from os.path import join, isdir, dirname, abspath
 import sys
 from time import time, sleep
 from datetime import datetime
