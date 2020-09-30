@@ -1,7 +1,8 @@
-"""Often used packages
+"""Import src/envs/env
 """
-import numpy as np
-import pandas as pd
+import os
+from os.path import join
+import sys
+sys.path.append(join("..", "src"))
 
-import matplotlib.pyplot as plt
-
+from envs.env import *
