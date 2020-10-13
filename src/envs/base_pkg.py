@@ -33,3 +33,7 @@ import sns
 ### Parallelization packages
 import numba as nb
 from dask import delayed, compute
+
+
+### CUDA
+# from numba import cuda
