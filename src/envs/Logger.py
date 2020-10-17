@@ -5,7 +5,7 @@
 
 ----
 """
-from envs.base_pkg import *
+from envs.env import *
 
 
 class Logger:
@@ -43,21 +43,25 @@ class Logger:
         else:
             print(f"{' '*(self.space+2)}>", *msgs)
 
+    @timer
     def chapter(self, *msgs):
         self.num_chapter += 1
         self.space = 0
-        print(f"{' '*self.space}-- Chapter {self.num_chapter}", *msgs)
+        print(f"{' '*self.space}---------- Chapter {self.num_chapter}", *msgs, "----------------------------------------")
 
+    @timer
     def section(self, *msgs):
         self.num_section += 1
         self.space = 0
         print(f"{' '*self.space}{self.num_section}", *msgs)
 
+    @timer
     def subsection(self, *msgs):
         self.num_subsection += 1
         self.space = 2
         print(f"{' '*self.space}{self.num_section}.{self.num_subsection}", *msgs)
 
+    @timer
     def subsubsection(self, *msgs):
         self.num_subsubsection += 1
         self.space = 4
