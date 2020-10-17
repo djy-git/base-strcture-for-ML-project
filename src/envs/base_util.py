@@ -29,3 +29,17 @@ def remove_dirs(*dirs):
             print(f"Remove not empty directory: '{dir}'")
 
 
+### Wrapper function
+def timer(fn):
+    @wraps(fn)
+    def log(*args, **kwargs):
+        start_time = time()
+        rst = fn(*args, **kwargs)
+        elapsed_time = time() - start_time
+        print(f"[Elapsed time - {fn.__name__}] {elapsed_time:.1f}s")
+        return rst
+    return log
+
+
+def info(*msgs):
+    print(f">", *msgs)
