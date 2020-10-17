@@ -28,7 +28,7 @@ if __name__ == "__main__":
     logger = Logger(LOG_DIR_PATH)
     logger.change_stdout()
 
-    cmd = sys.argv[1]
+    cmd = 'log'  # sys.argv[1]
     with Switch(cmd) as case:
         if case('log'):
             log_sample()
