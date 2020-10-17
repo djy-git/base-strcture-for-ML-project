@@ -36,7 +36,6 @@ def timer(fn):
         start_time = time()
         rst = fn(*args, **kwargs)
         elapsed_time = time() - start_time
-
-        print(f"[Elapsed time] {elapsed_time:.1f}s \n")
+        print(f"[Elapsed time - {fn.__name__}] {elapsed_time:.1f}s")
         return rst
     return log

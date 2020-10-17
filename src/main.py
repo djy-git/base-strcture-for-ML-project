@@ -8,29 +8,42 @@ from envs.env import *
 
 
 def log_sample():
-    """
-    Log sample
-    """
-    logger.chapter("happy", "halloween")
-    logger.info("A", "B", "C")
+    print("Do in log_sample")
+    chapter1()
+    chapter2()
 
-    logger.section("happy", "halloween")
-    logger.info("A", "B", "C")
+@chapter
+def chapter1():
+    print("Do in chapter1")
 
-    logger.subsection("happy", "halloween")
-    logger.info("A", "B", "C")
+    section1()
+    section2()
 
-    logger.subsubsection("happy", "halloween")
-    logger.info("A", "B", "C")
+@section
+def section1():
+    print("Do in section1")
+
+    subsection1()
+
+@section
+def section2():
+    print("Do in section2")
+
+@subsection
+def subsection1():
+    print("Do subsection1")
+
+@chapter
+def chapter2():
+    print("Do in chapter2")
+
+
 
 
 if __name__ == "__main__":
-    logger = Logger(LOG_DIR_PATH)
-    logger.change_stdout()
-
-    cmd = 'log'  # sys.argv[1]
+    cmd = 'log_sample'  # sys.argv[1]
     with Switch(cmd) as case:
-        if case('log'):
+        if case('log_sample'):
             log_sample()
 
         if case('reset'):
