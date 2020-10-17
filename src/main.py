@@ -8,34 +8,34 @@ from envs.env import *
 
 
 def log_sample():
-    print("Do in log_sample")
+    info("Do in log_sample")
     chapter1()
     chapter2()
 
 @chapter
 def chapter1():
-    print("Do in chapter1")
+    info("Do in chapter1")
 
     section1()
     section2()
 
 @section
 def section1():
-    print("Do in section1")
+    info("Do in section1")
 
     subsection1()
 
 @section
 def section2():
-    print("Do in section2")
+    info("Do in section2")
 
 @subsection
 def subsection1():
-    print("Do subsection1")
+    info("Do subsection1")
 
 @chapter
 def chapter2():
-    print("Do in chapter2")
+    info("Do in chapter2")
 
 
 if __name__ == "__main__":
