@@ -27,3 +27,16 @@ def remove_dirs(*dirs):
         except:
             shutil.rmtree(dir)
             print(f"Remove not empty directory: '{dir}'")
+
+
+### Wrapper function
+def timer(fn):
+    @wraps(fn)
+    def log(*args, **kwargs):
+        start_time = time()
+        rst = fn(*args, **kwargs)
+        elapsed_time = time() - start_time
+
+        print(f"[Elapsed time] {elapsed_time:.1f}s \n")
+        return rst
+    return log
