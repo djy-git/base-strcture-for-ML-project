@@ -38,8 +38,6 @@ def chapter2():
     print("Do in chapter2")
 
 
-
-
 if __name__ == "__main__":
     cmd = 'log_sample'  # sys.argv[1]
     with Switch(cmd) as case:
