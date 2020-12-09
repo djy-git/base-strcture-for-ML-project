@@ -4,36 +4,28 @@
 
 ----
 """
-from envs.util import *
-from Logger import *
+from envs.Logger import *
 
 
 def log_sample():
     info("Do in log_sample")
     chapter1()
     chapter2()
-
 @chapter
 def chapter1():
     info("Do in chapter1")
-
     section1()
     section2()
-
 @section
 def section1():
     info("Do in section1")
-
     subsection1()
-
 @section
 def section2():
     info("Do in section2")
-
 @subsection
 def subsection1():
     info("Do subsection1")
-
 @chapter
 def chapter2():
     info("Do in chapter2")
