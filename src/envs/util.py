@@ -17,8 +17,7 @@ def generate_dirs(*dirs):
             os.makedirs(dir)
             print(f"Generate directory: '{dir}'")
         except:
-            pass
-            # print(f"Existing directory: '{dir}'")
+            print(f"Existing directory: '{dir}'")
 def remove_dirs(*dirs):
     print("> Remove directories")
     for dir in dirs:
@@ -37,10 +36,25 @@ def timer(fn):
         start_time = time()
         rst = fn(*args, **kwargs)
         elapsed_time = time() - start_time
-        print(f"[Elapsed time - {fn.__name__}] {elapsed_time:.1f}s")
+        G.total_time += elapsed_time
+        print(f"[{fn.__name__}] {elapsed_time:.1f}s (total: {G.total_time:.1f}s)")
         return rst
     return log
+def meminfo(fn):
+    def log_gpu_memory():
+        print(f"\n{'='*100}")
+        for idx_gpu in range(len(cuda.gpus)):
+            current_context = cuda.current_context()
+            memories = current_context.get_memory_info()
+            gpu_memory = dict(free=f"{memories.free // 2 ** 20} MB",
+                              total=f"{memories.total // 2 ** 20} MB")
+            print(f'------------------- GPU {idx_gpu} MEMORY:', gpu_memory, '-------------------')
+        print(f"\n{'='*100}")
 
-
-def info(*msgs):
-    print(f">", *msgs)
+    @wraps(fn)
+    def log(*args, **kwargs):  # Use log_gpu_memory(cuda.current_context())
+        log_gpu_memory()
+        rst = fn(*args, **kwargs)
+        log_gpu_memory()
+        return rst
+    return log

@@ -19,3 +19,7 @@ class G:
 
     ### Random seed
     SEED = 42
+
+
+    ### Total elapsed time
+    total_time = 0

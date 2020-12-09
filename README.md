@@ -39,12 +39,12 @@ ROOT
     │   ├── config.py
     │   └── config_user.py
     ├── envs
-    │   ├── Logger.py
     │   ├── SignalHandler.py
     │   ├── __init__.py
     │   ├── base_env.py
     │   ├── util.py
     │   └── env.py
+    ├── Logger.py
     └── main.py
 ```
 
@@ -94,3 +94,14 @@ See the details in each module's head comment.
 ### 2.9.3 `/src/main.py`
 This module is invoked in `setup.py`.  
 The action in `main.py` is controlled by the command received from `setup.py`.
+
+### 2.9.4 `/src/Logger.py`
+This module controls the logging.  
+
+
+# 3 Environment dependency
+```
+config_user.py → config.py        → env.py
+                 base_env.py      → env.py
+                 SignalHandler.py → env.py → util.py 
+```

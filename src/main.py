@@ -4,7 +4,8 @@
 
 ----
 """
-from envs.env import *
+from envs.util import *
+from Logger import *
 
 
 def log_sample():
