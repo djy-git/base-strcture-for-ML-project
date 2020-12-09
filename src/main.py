@@ -38,7 +38,7 @@ if __name__ == "__main__":
             log_sample()
 
         if case('reset'):
-            remove_dirs(INPUT_DIR_PATH, OUTPUT_DIR_PATH, LOG_DIR_PATH)
+            remove_dirs(G.INPUT_DIR_PATH, G.OUTPUT_DIR_PATH, G.LOG_DIR_PATH)
 
         if case.default:
             print(cmd, "is not valid value")
