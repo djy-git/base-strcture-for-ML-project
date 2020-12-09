@@ -32,13 +32,14 @@ def chapter2():
 
 
 if __name__ == "__main__":
-    cmd = 'log_sample'  # sys.argv[1]
+    cmd = sys.argv[1]
     with Switch(cmd) as case:
-        if case('log_sample'):
+        if case('run'):
             log_sample()
 
         if case('reset'):
             remove_dirs(INPUT_DIR_PATH, OUTPUT_DIR_PATH, LOG_DIR_PATH)
 
         if case.default:
+            print(cmd, "is not valid value")
             raise ValueError
