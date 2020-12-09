@@ -7,7 +7,7 @@
 """
 from setuptools import find_packages, setup
 from setuptools import Command
-from subprocess import call
+from subprocess import run
 
 
 ### Long description is in 'README.md'
@@ -18,24 +18,18 @@ with open("README.md", "r") as f:
 ### Permitted commands
 class MainCommand:
     user_options = []
-    def initialize_options(self):   pass
-    def finalize_options(self):     pass
+    def initialize_options(self): pass
+    def finalize_options(self): pass
 
     @staticmethod
     def run_main(option=""):
-        call(["python", "main.py", option], cwd="src")
+        run(["python", "main.py", option], cwd="src")
 
 
 class Run(MainCommand, Command):
-    description = "Run src/main.py"
+    description = "Run src/main.py run"
     def run(self):
-        super().run_main()
-
-class Log(MainCommand, Command):
-    description = "Run src/main.py log"
-    def run(self):
-        super().run_main('log')
-
+        super().run_main('run')
 
 class Reset(MainCommand, Command):
     description = "Run src/main.py reset"
@@ -62,7 +56,6 @@ setup(
     python_requires=">=3.7",
     cmdclass={
         "run"   : Run,
-        "log"   : Log,
         "reset" : Reset,
     }
 )
