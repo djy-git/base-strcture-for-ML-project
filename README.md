@@ -6,24 +6,33 @@ The base structure of machine learning project
 ```bash
 ROOT
 ├── README.md
+│
 ├── algorithm
 │   ├── README.md
 │   └── dummy.algo
+│
 ├── doc-sphinx
-│   └── README.md
+│   └── ...
+│
 ├── etc
-│   └── dummy
+│   └── ...
+│
 ├── input
-│   └── dummy
+│   └── ...
+│
 ├── log
-│   └── dummy
+│   └── ...
+│
 ├── output
-│   └── dummy
+│   └── ...
+│
 ├── playground
 │   ├── env.py
 │   ├── playground.ipynb
 │   └── playground.py
+│
 ├── setup.py
+│
 └── src
     ├── configs
     │   ├── __init__.py
