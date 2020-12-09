@@ -105,3 +105,6 @@ config_user.py → config.py        → env.py
                  base_env.py      → env.py
                  SignalHandler.py → env.py → util.py 
 ```
+
+# 4 How to use `Logger`
+Just import `Logger.py`. Then, `print()` is logged in terminal and log file in `/log` both.
