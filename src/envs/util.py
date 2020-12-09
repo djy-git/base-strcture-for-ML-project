@@ -1,11 +1,12 @@
-"""**Base utility module**
+"""**Utility module**
 
-1. This file **should not** import other modules or packages in the project except `base_pkg.py` (thus, **base**)
-2. This file only defines commonly used functions or classes
+1. This file defines commonly used functions or classes
+2. This has the highest dependency level in envs.
+   Thus, just import this module instead of other modules.
 
 ----
 """
-from envs.base_pkg import *
+from envs.env import *
 
 
 ### Control directories

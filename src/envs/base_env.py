@@ -7,14 +7,14 @@
 """
 ### Internal packages
 import os
-from os.path import join, isdir, dirname, abspath
+from os.path import join, isdir, dirname, basename, abspath
+import shutil
 import sys
 from time import time, sleep
 from datetime import datetime
 from pytz import timezone
 from abc import ABCMeta, abstractmethod
 import signal
-import shutil
 from functools import wraps
 
 
@@ -37,4 +37,4 @@ from dask import delayed, compute
 
 
 ### CUDA
-# from numba import cuda
+from numba import cuda, int16, float32
