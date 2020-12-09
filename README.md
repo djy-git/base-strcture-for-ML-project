@@ -39,12 +39,12 @@ ROOT
     │   ├── config.py
     │   └── config_user.py
     ├── envs
-    │   ├── SignalHandler.py
     │   ├── __init__.py
+    │   ├── SignalHandler.py
+    │   ├── Logger.py
     │   ├── base_env.py
-    │   ├── util.py
-    │   └── env.py
-    ├── Logger.py
+    │   ├── env.py
+    │   └── util.py
     └── main.py
 ```
 
@@ -103,7 +103,7 @@ This module controls the logging.
 ```
 config_user.py → config.py        → env.py
                  base_env.py      → env.py
-                 SignalHandler.py → env.py → util.py 
+                 SignalHandler.py → env.py → util.py
 ```
 
 # 4 How to use `Logger`
