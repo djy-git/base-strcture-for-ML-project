@@ -40,6 +40,7 @@ class Logger:
     def change_stdout(self):
         sys.stdout = self.LogOut(self.log_dir_path)
 
+
     ### Log section
     def log(self, s):
         print(s[:self.NUM_LOG_LENGTH])

@@ -54,7 +54,6 @@ def meminfo(fn):
                               total=f"{memories.total // 2 ** 20} MB")
             print(f'------------------- GPU {idx_gpu} MEMORY:', gpu_memory, '-------------------')
         print(f"\n{'='*100}")
-
     @wraps(fn)
     def log(*args, **kwargs):
         log_gpu_memory()
@@ -68,5 +67,5 @@ def meminfo(fn):
 ###     Usage: log_line(currentframe())
 def log_line(cur_frame):
     frameinfo = getframeinfo(cur_frame)
-    filename = frameinfo.filename.split('/')[-1]
+    _, filename = frameinfo.filename.split(G.ROOT_DIR_PATH)
     print(f"\n** log_line(): {filename} (line {frameinfo.lineno}) ** \n")
