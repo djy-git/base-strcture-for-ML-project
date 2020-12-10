@@ -65,6 +65,7 @@ def meminfo(fn):
 
 
 ### Debugging line logger
+###     Usage: log_line(currentframe())
 def log_line(cur_frame):
     frameinfo = getframeinfo(cur_frame)
     filename = frameinfo.filename.split('/')[-1]
