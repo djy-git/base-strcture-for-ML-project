@@ -99,9 +99,3 @@ def subsubsection(fn):
         rst = fn(*args, **kwargs)
         return rst
     return log
-
-
-### Log utility function
-def info(*msgs):
-    print(f">", *msgs)
-

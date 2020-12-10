@@ -6,24 +6,8 @@
 """
 from envs.Logger import *
 
-
-if __name__ == "__main__":
-    cmd = sys.argv[1]
-    with Switch(cmd) as case:
-        if case('run'):
-            log_sample()
-
-        if case('reset'):
-            remove_dirs(G.INPUT_DIR_PATH, G.OUTPUT_DIR_PATH, G.LOG_DIR_PATH)
-
-        if case.default:
-            print(cmd, "is not valid value")
-            raise ValueError
-
-
-
 def log_sample():
-    info("Do in log_sample")
+    log_line(currentframe())
     chapter1()
     chapter2()
 @chapter
@@ -45,3 +29,16 @@ def subsection1():
 def chapter2():
     info("Do in chapter2")
 
+
+
+if __name__ == "__main__":
+    cmd = sys.argv[1]
+    with Switch(cmd) as case:
+        if case('run'):
+            log_sample()
+
+        if case('reset'):
+            remove_dirs(G.INPUT_DIR_PATH, G.OUTPUT_DIR_PATH, G.LOG_DIR_PATH)
+
+        if case.default:
+            raise ValueError(f"'{cmd}' is not a valid command")

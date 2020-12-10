@@ -9,9 +9,13 @@
 from envs.env import *
 
 
+### Log utility function
+info = lambda *msgs: print(f">", *msgs)
+
+
 ### Control directories
 def generate_dirs(*dirs):
-    print("> Generate directories")
+    info("Generate directories")
     for dir in dirs:
         try:
             os.makedirs(dir)
@@ -52,9 +56,16 @@ def meminfo(fn):
         print(f"\n{'='*100}")
 
     @wraps(fn)
-    def log(*args, **kwargs):  # Use log_gpu_memory(cuda.current_context())
+    def log(*args, **kwargs):
         log_gpu_memory()
         rst = fn(*args, **kwargs)
         log_gpu_memory()
         return rst
     return log
+
+
+### Debugging line logger
+def log_line(cur_frame):
+    frameinfo = getframeinfo(cur_frame)
+    filename = frameinfo.filename.split('/')[-1]
+    print(f"\n** log_line(): {filename} (line {frameinfo.lineno}) ** \n")
