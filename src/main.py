@@ -6,6 +6,7 @@
 """
 from envs.Logger import *
 
+
 def log_sample():
     log_line(currentframe())
     chapter1()
@@ -28,7 +29,6 @@ def subsection1():
 @chapter
 def chapter2():
     info("Do in chapter2")
-
 
 
 if __name__ == "__main__":
